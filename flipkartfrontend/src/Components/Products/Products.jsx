@@ -71,7 +71,7 @@ const clicktoShowType=()=>{
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/v1/products/getAllProducts');
+        const response = await fetch('https://flipkartclone2-o8uw.onrender.com/api/v1/products/getAllProducts');
         const data = await response.json();
         console.log('Response from backend:', data);
 

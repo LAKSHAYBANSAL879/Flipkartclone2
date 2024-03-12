@@ -8,7 +8,7 @@ const Reviews = ({ productName, userName }) => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/v1/review/all/${productName}`);
+        const response = await axios.get(`https://flipkartclone2-o8uw.onrender.com/api/v1/review/all/${productName}`);
         setReviews(response.data);
       } catch (error) {
         console.error('Error fetching reviews:', error.message);
@@ -25,7 +25,7 @@ const Reviews = ({ productName, userName }) => {
   const handleUpdateReview = async (id) => {
     try {
      
-      const existingReviewsResponse = await axios.get(`http://localhost:8080/api/v1/review/all/${productName}`);
+      const existingReviewsResponse = await axios.get(`https://flipkartclone2-o8uw.onrender.com/api/v1/review/all/${productName}`);
       const existingReviews = existingReviewsResponse.data;
   
       
@@ -37,7 +37,7 @@ const Reviews = ({ productName, userName }) => {
       const updatedRating = prompt('Enter updated rating:', existingReview.rating);
   
      
-      const response = await axios.put(`http://localhost:8080/api/v1/review/update/${id}`, {
+      const response = await axios.put(`https://flipkartclone2-o8uw.onrender.com/api/v1/review/update/${id}`, {
         title: updatedTitle || existingReview.title,
         description: updatedDescription || existingReview.description,
         rating: updatedRating || existingReview.rating,
@@ -49,7 +49,7 @@ const Reviews = ({ productName, userName }) => {
      
       if (response.status === 200) {
        
-        const updatedResponse = await axios.get(`http://localhost:8080/api/v1/review/all/${productName}`);
+        const updatedResponse = await axios.get(`https://flipkartclone2-o8uw.onrender.com/api/v1/review/all/${productName}`);
         
        
         setReviews(updatedResponse.data);
@@ -76,7 +76,7 @@ const Reviews = ({ productName, userName }) => {
 
       if (canModifyReview(reviewToDelete.userName)) {
       
-        await axios.delete(`http://localhost:8080/api/v1/review/delete/${id}`);
+        await axios.delete(`https://flipkartclone2-o8uw.onrender.com/api/v1/review/delete/${id}`);
         alert('Review deleted successfully');
         const updatedReviews = reviews.filter((review) => review._id !== id);
         setReviews(updatedReviews);
@@ -117,13 +117,13 @@ const Reviews = ({ productName, userName }) => {
               {review.image && review.image.map((image, index) => (
                 <img
                   key={index}
-                  src={`http://localhost:8080/api/v1/review/uploads/${image}`}
+                  src={`https://flipkartclone2-o8uw.onrender.com/api/v1/review/uploads/${image}`}
                   alt={review.title}
                   style={{ maxWidth: '100px', margin: '5px' }}
                 />
               ))}
             </div>
-            {/* <img src={`http://localhost:8080/api/v1/review/uploads/${review.image}`} alt={review.title} style={{ maxWidth: '200px' }} /> */}
+            {/* <img src={`https://flipkartclone2-o8uw.onrender.com/api/v1/review/uploads/${review.image}`} alt={review.title} style={{ maxWidth: '200px' }} /> */}
           <h1 className='font-bold text-gray-400 flex gap-3 ml-2'>{review.userName}<FontAwesomeIcon icon={faCircleCheck} className='mt-1'/>Flipkart Certified Buyer</h1>
             {canModifyReview(review.userName) && (
               <div className='flex flex-row ml-2 justify-between'>

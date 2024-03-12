@@ -45,7 +45,7 @@ export const Profile = () => {
       }
 
       const response = await axios.put(
-        "http://localhost:8080/api/v1/auth/update",
+        "https://flipkartclone2-o8uw.onrender.com/api/v1/auth/update",
         formData,
         {
           headers: {
@@ -106,7 +106,7 @@ export const Profile = () => {
                 <div className="bg-gray-50  border-blue-500 p-2">
                   {user.profileImageUrl && (
                     <img
-                      src={`http://localhost:8080/api/v1/auth/uploadss/${user.profileImageUrl}`}
+                      src={`https://flipkartclone2-o8uw.onrender.com/api/v1/auth/uploadss/${user.profileImageUrl}`}
                       alt="Profile"
                       className="block mx-auto mt-2 rounded-full h-16 w-16 object-cover"
                     />
@@ -116,7 +116,7 @@ export const Profile = () => {
                 <div className="bg-white  p-2 flex items-center">
                   {user.profileImageUrl && (
                     <img
-                      src={`http://localhost:8080/api/v1/auth/uploadss/${user.profileImageUrl}`}
+                      src={`https://flipkartclone2-o8uw.onrender.com/api/v1/auth/uploadss/${user.profileImageUrl}`}
                       alt="Profile"
                       className="block ml-4 mt-2 rounded-full h-16 w-16 object-cover"
                     />

@@ -22,7 +22,7 @@ export const LoginSignup = () => {
 
     try {
       
-     const response= await axios.post('http://localhost:8080/api/v1/auth/signin', {
+     const response= await axios.post('https://flipkartclone2-o8uw.onrender.com/api/v1/auth/signin', {
              
         email,
         password,
@@ -50,7 +50,7 @@ setUser(response.data.user)
      
       </div>
   <div className='w-2/3'>
-  <form className="space-y-6 w-3/4 ml-10" action="http://localhost:8080/api/v1/auth/signin" onSubmit={loginUser} method="POST">
+  <form className="space-y-6 w-3/4 ml-10" action="https://flipkartclone2-o8uw.onrender.com/api/v1/auth/signin" onSubmit={loginUser} method="POST">
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Email address

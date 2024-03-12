@@ -16,7 +16,7 @@ const [role,setRole]=useState(null);
         const token = Cookies.get('token');
 
         if (token) {
-          const response = await axios.get('http://localhost:8080/api/v1/auth/getuser', {
+          const response = await axios.get('https://flipkartclone2-o8uw.onrender.com/api/v1/auth/getuser', {
             headers: {
               Authorization: `${token}`,
             },

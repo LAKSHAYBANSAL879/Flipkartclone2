@@ -44,7 +44,7 @@ export const Signup = () => {
         formData.append("profileImageUrl", profileImageUrl);
       }
 
-      await axios.post("http://localhost:8080/api/v1/auth/signup", formData);
+      await axios.post("https://flipkartclone2-o8uw.onrender.com/api/v1/auth/signup", formData);
 
       closeModal();
       navigate("/signin");
@@ -95,7 +95,7 @@ export const Signup = () => {
             <span className="close relative -top-24 cursor-pointer left-full text-2xl font-bold text-blue-500" onClick={closeModal}>
           &times;
         </span>
-          <form className="space-y-6" action="http://localhost:8080/api/v1/auth/signup" onSubmit={registerUser} method="POST" encType="multipart/form-data">
+          <form className="space-y-6" action="https://flipkartclone2-o8uw.onrender.com/api/v1/auth/signup" onSubmit={registerUser} method="POST" encType="multipart/form-data">
             
               
               <div>

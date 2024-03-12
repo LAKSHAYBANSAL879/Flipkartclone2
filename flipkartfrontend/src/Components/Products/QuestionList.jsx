@@ -9,7 +9,7 @@ const QuestionList = ({ productName }) => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/question/getQuestion/${productName}`);
+        const response = await fetch(`https://flipkartclone2-o8uw.onrender.com/api/v1/question/getQuestion/${productName}`);
         if (response.ok) {
           const data = await response.json();
           console.log("data is :",data);

@@ -16,7 +16,7 @@ const SimilarProducts = ({ mainCategory, subCategory, currentProductId }) => {
   useEffect(() => {
     const fetchSimilarProducts = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/products/getAllProducts`);
+        const response = await fetch(`https://flipkartclone2-o8uw.onrender.com/api/v1/products/getAllProducts`);
 
         if (!response.ok) {
           throw new Error(`Failed to fetch similar products. Status: ${response.status}`);

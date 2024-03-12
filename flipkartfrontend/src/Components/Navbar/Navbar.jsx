@@ -55,7 +55,7 @@ export const Navbar = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/products/getAllProducts`);
+      const response = await fetch(`https://flipkartclone2-o8uw.onrender.com/api/v1/products/getAllProducts`);
       if (!response.ok) {
         throw new Error(`Failed to fetch products. Status: ${response.status}`);
       }
@@ -191,7 +191,7 @@ export const Navbar = () => {
         <div className={` cursor-pointer ml-2  rounded-full p-2  ${showLinks ? 'hidden' : ''}`}>
           <Link to={user ? '/profile' : '/signin'} className=' gap-2 text-white'>
             {!!user &&
-             <div className=''><img  src={`http://localhost:8080/api/v1/auth/uploadss/${user.profileImageUrl}`} className="block mx-auto mt-2 rounded-full h-16 w-16 object-cover" alt="" /></div>
+             <div className=''><img  src={`https://flipkartclone2-o8uw.onrender.com/api/v1/auth/uploadss/${user.profileImageUrl}`} className="block mx-auto mt-2 rounded-full h-16 w-16 object-cover" alt="" /></div>
             
             }
           </Link>

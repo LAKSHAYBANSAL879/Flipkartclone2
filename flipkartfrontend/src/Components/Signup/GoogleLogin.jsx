@@ -7,7 +7,7 @@ const GoogleLoginHandler = () => {
   const navigate = useNavigate();
 
   const googleLogin = () => {
-    window.location.href = 'http://localhost:8080/api/v1/auth/google/callback';
+    window.location.href = 'https://flipkartclone2-o8uw.onrender.com/api/v1/auth/google/callback';
   };
 
   const { token, user: userString } = useParams();

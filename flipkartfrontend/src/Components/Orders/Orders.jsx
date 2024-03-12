@@ -54,7 +54,7 @@ const Orders = () => {
   const fetchOrders = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8080/api/v1/order/getOrders"
+        "https://flipkartclone2-o8uw.onrender.com/api/v1/order/getOrders"
       );
       const data = await response.json();
 console.log(data);
@@ -107,7 +107,7 @@ console.log(data);
         return;
       }
       const response = await fetch(
-        `http://localhost:8080/api/v1/order/updateOrder/${orderId}`,
+        `https://flipkartclone2-o8uw.onrender.com/api/v1/order/updateOrder/${orderId}`,
         {
           method: "PUT",
           headers: {

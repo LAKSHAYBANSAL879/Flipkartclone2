@@ -40,7 +40,7 @@ const AddReview = ({ productName, userName }) => {
     formData.append('productName', productName);
 
     try {
-      await axios.post('http://localhost:8080/api/v1/review/add', formData, {
+      await axios.post('https://flipkartclone2-o8uw.onrender.com/api/v1/review/add', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -74,7 +74,7 @@ const AddReview = ({ productName, userName }) => {
   };
   const checkValidUser = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/v1/order/getOrders');
+      const response = await fetch('https://flipkartclone2-o8uw.onrender.com/api/v1/order/getOrders');
       if (!response.ok) {
         throw new Error(`Failed to fetch orders. Status: ${response.status}`);
       }

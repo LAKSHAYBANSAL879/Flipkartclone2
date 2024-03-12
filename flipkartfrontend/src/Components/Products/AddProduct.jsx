@@ -55,7 +55,7 @@ const[mrp,setMrp]=useState(0);
     };
 
     try {
-      await axios.post('http://localhost:8080/api/v1/products/newProduct', productData);
+      await axios.post('https://flipkartclone2-o8uw.onrender.com/api/v1/products/newProduct', productData);
       toast.success('New product has been added successfully');
       Navigate('/');
     } catch (error) {

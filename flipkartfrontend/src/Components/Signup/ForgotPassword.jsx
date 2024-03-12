@@ -15,7 +15,7 @@ const Navigate=useNavigate();
     e.preventDefault();
     try {
       
-      const response = await axios.post('http://localhost:8080/api/v1/auth/forgotpassword', {
+      const response = await axios.post('https://flipkartclone2-o8uw.onrender.com/api/v1/auth/forgotpassword', {
         email,
       });
 
@@ -30,7 +30,7 @@ const Navigate=useNavigate();
     e.preventDefault();
     try {
      
-      const response = await axios.post(`http://localhost:8080/api/v1/auth/resetpassword/${resetToken}`, {
+      const response = await axios.post(`https://flipkartclone2-o8uw.onrender.com/api/v1/auth/resetpassword/${resetToken}`, {
         password: newPassword,
       });
       alert(response.data.message);

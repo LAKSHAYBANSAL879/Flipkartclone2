@@ -25,7 +25,7 @@ const [selectedOrder, setSelectedOrder] = useState(null);
         const fetchProductDetails = async () => {
           try {
             const response = await fetch(
-              `http://localhost:8080/api/v1/order/getOrder/${orderId}`
+              `https://flipkartclone2-o8uw.onrender.com/api/v1/order/getOrder/${orderId}`
             );
     
             if (!response.ok) {
@@ -135,7 +135,7 @@ const [selectedOrder, setSelectedOrder] = useState(null);
       if (confirmation) {
         try {
           const response = await fetch(
-            `http://localhost:8080/api/v1/order/updateOrder/${orderId}`,
+            `https://flipkartclone2-o8uw.onrender.com/api/v1/order/updateOrder/${orderId}`,
             {
               method: "PUT",
               headers: {

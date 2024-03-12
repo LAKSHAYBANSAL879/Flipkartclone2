@@ -14,7 +14,7 @@ const WishlistProvider = ({ children }) => {
 
   const fetchWishlist = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/wishlist/getWishlist/${user.email}`, {
+      const response = await fetch(`https://flipkartclone2-o8uw.onrender.com/api/v1/wishlist/getWishlist/${user.email}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const WishlistProvider = ({ children }) => {
 
   const addToWishlist = async (productId, productDetails) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/wishlist/addWishlist/${productId}`, {
+      const response = await fetch(`https://flipkartclone2-o8uw.onrender.com/api/v1/wishlist/addWishlist/${productId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const WishlistProvider = ({ children }) => {
 
   const removeFromWishlist = async (productId) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/wishlist/removeWishlist/${productId}`, {
+      const response = await fetch(`https://flipkartclone2-o8uw.onrender.com/api/v1/wishlist/removeWishlist/${productId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

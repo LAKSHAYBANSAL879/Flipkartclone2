@@ -52,7 +52,7 @@ const Navigate=useNavigate();
   const handleAddressSubmit = async (address) => {
     try {
       const response = await fetch(
-        "http://localhost:8080/api/v1/address/addAddress",
+        "https://flipkartclone2-o8uw.onrender.com/api/v1/address/addAddress",
         {
           method: "POST",
           headers: {
@@ -84,7 +84,7 @@ const Navigate=useNavigate();
   const fetchAddresses = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8080/api/v1/address/getAddress",
+        "https://flipkartclone2-o8uw.onrender.com/api/v1/address/getAddress",
         {
           method: "GET",
           headers: {
@@ -127,7 +127,7 @@ const Navigate=useNavigate();
     try {
      
       const response = await fetch(
-        "http://localhost:8080/api/v1/order/addOrder",
+        "https://flipkartclone2-o8uw.onrender.com/api/v1/order/addOrder",
         {
           method: "POST",
           headers: {
@@ -178,7 +178,7 @@ const Navigate=useNavigate();
         };
 
         const response = await fetch(
-          "http://localhost:8080/api/v1/payment/payment",
+          "https://flipkartclone2-o8uw.onrender.com/api/v1/payment/payment",
           {
             method: "POST",
             headers: {
@@ -200,7 +200,7 @@ const Navigate=useNavigate();
             image: "https://example.com/your_logo",
             order_id: result.paymentResponse.id,
             callback_url:
-              "http://localhost:8080/api/v1/payment/paymentVerification",
+              "https://flipkartclone2-o8uw.onrender.com/api/v1/payment/paymentVerification",
             prefill: {
               name: "Lakshay Bansal",
               email: "lakshayBansal@example.com",

@@ -8,7 +8,7 @@ const BestofElectronics = () => {
   const [electronicsProducts, setElectronicsProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/v1/products/getAllProducts')
+    fetch('https://flipkartclone2-o8uw.onrender.com/api/v1/products/getAllProducts')
       .then((response) => response.json())
       .then((responseData) => {
         console.log('API Response:', responseData);

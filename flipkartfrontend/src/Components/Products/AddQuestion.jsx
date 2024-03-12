@@ -8,7 +8,7 @@ const AddQuestionForm = ({ productName, onQuestionAdded, userName }) => {
 
   const handleAddQuestion = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/v1/question/addQuestion', {
+      const response = await fetch('https://flipkartclone2-o8uw.onrender.com/api/v1/question/addQuestion', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

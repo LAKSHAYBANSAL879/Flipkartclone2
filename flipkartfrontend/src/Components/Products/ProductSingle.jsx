@@ -54,7 +54,7 @@ const ProductSingle = () => {
     const fetchProductDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/v1/products/getProduct/${decodedName}`
+          `https://flipkartclone2-o8uw.onrender.com/api/v1/products/getProduct/${decodedName}`
         );
 
         if (!response.ok) {
