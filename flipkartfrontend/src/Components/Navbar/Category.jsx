@@ -211,7 +211,7 @@ setShowBikeDropdown(false);
               <Link to='/Fashion/Clothing' className='p-2 hover:bg-gray-100 w-full'>
                Clothing
               </Link>
-              <Link to='/Footwear' className='p-2 hover:bg-gray-100 w-full'>
+              <Link to='/Fashion/Footwear' className='p-2 hover:bg-gray-100 w-full'>
                Footwears
               </Link>
             </div>

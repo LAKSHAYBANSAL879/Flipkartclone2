@@ -116,7 +116,7 @@ const SimilarProducts = ({ mainCategory, subCategory, currentProductId }) => {
                     {product.mrp}
                   </h1>
                   <h1 className='text-green-600 font-bold text-sm'>
-                    {((product.mrp - product.price) / product.mrp) * 100}%
+                    {(((product.mrp - product.price) / product.mrp) * 100).toFixed(0)}%
                   </h1>
                 </div>
               </div>

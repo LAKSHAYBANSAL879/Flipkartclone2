@@ -69,7 +69,7 @@ const AddReview = ({ productName, userName }) => {
     content: {
       width: '1200px', 
       height: '550px',
-      margin: '45px 105px',
+      margin: '95px 105px',
     },
   };
   const checkValidUser = async () => {
